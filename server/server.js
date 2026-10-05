@@ -3,6 +3,7 @@ const cors = require("cors");
 require("dotenv").config();
 
 const pool = require("./config/db");
+const taskRoutes = require("./routes/taskRoutes");
 
 const app = express();
 
@@ -14,6 +15,8 @@ app.get("/", (req, res) => {
         message: "Task Management API is running"
     });
 });
+
+app.use("/api/tasks", taskRoutes);
 
 const PORT = process.env.PORT || 5000;
 
