@@ -112,9 +112,11 @@ function App() {
     });
 
     return (
-        <div>
-            <h1>ManageIt</h1>
-            <p>Task Management System</p>
+        <div className="app">
+    <div className="header">
+        <h1>ManageIt</h1>
+        <p>Task Management System</p>
+    </div>
 
             {error && <p>{error}</p>}
 
